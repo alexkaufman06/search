@@ -1,0 +1,83 @@
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+<body>
+  <div class="container">
+    <h1 class="text-center">Login and Name Search</h1>
+    <form id="log-in">
+      <div class="form-group">
+        <label for="userName">Enter your username:</label>
+        <input id="userName" type="text" class="form-control" required>
+        <label for="password">Enter your password:</label>
+        <input id="password" type="text" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-success">Log-in</button>
+    </form>
+
+    <div id="result" style="display:none;">
+      <hr>
+      <p class="text-center">
+        <strong>Welcome <span class="name"></span>!</strong>
+      </p>
+      <form id="search">
+        <div class="form-group">
+          <label for="searchText">Search Users:</label>
+          <input id="searchText" type="text" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-success">Search</button>
+      </form>
+    </div>
+
+    <div id="searchResults" style="display:none;">
+      <p>
+        <strong>Here are your results:</strong> <span class="resultCount"></span>
+        users matched that search.
+      </p>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script>
+    var logIn = function(userName, userPw) {
+      $.ajax("http://localhost:8080/rest2ldap/users/user.0", {
+        method: "GET",
+        headers: {"X-Username": userName, "X-Password": userPw}
+      }).done(function(data, status) {
+        if (status == "success") {
+          $("#result").show();
+          $(".name").text(data.userName);
+        } else {
+          //tried sending an error message here but decided to move on
+        }
+      });
+    }
+
+    var searchUsers = function(userName, userPw, searchText) {
+      $.ajax('http://localhost:8080/rest2ldap/users?_queryFilter=displayName co "' + searchText + '"', {
+        method: "GET",
+        headers: {"X-Username": userName, "X-Password": userPw}
+      }).done(function(data, status) {
+        $("#searchResults").show();
+        $(".resultCount").text(data.resultCount);
+      });
+    }
+
+    $(document).ready(function() {
+      $("form#log-in").submit(function(event) {
+        var userName = $("input#userName").val();
+        var password = $("input#password").val();
+        var userInfo = logIn(userName, password);
+
+        event.preventDefault();
+      });
+
+      $("form#search").submit(function(event) {
+        var userName = $("input#userName").val();
+        var password = $("input#password").val();
+        var searchText = $("input#searchText").val();
+        var search = searchUsers(userName, password, searchText);
+
+        event.preventDefault();
+      });
+    });
+
+  </script>
+</body>

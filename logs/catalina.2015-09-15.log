@@ -1,0 +1,80 @@
+Sep 15, 2015 10:42:25 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files (x86)\Java\jre7\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\ActiveState Komodo Edit 8\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\nodejs\;C:\Program Files (x86)\Skype\Phone\;C:\Users\Alex Kaufman\AppData\Roaming\npm;C:\Users\Alex Kaufman\AppData\Local\atom\bin;.
+Sep 15, 2015 10:42:25 AM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8080"]
+Sep 15, 2015 10:42:25 AM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-bio-8009"]
+Sep 15, 2015 10:42:25 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 685 ms
+Sep 15, 2015 10:42:25 AM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+Sep 15, 2015 10:42:25 AM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.53
+Sep 15, 2015 10:42:25 AM org.apache.catalina.startup.HostConfig deployWAR
+INFO: Deploying web application archive C:\Users\Alex Kaufman\Desktop\UserInterfaceExercise\webapps\rest2ldap.war
+Sep 15, 2015 10:42:28 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Users\Alex Kaufman\Desktop\UserInterfaceExercise\webapps\docs
+Sep 15, 2015 10:42:28 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Users\Alex Kaufman\Desktop\UserInterfaceExercise\webapps\examples
+Sep 15, 2015 10:42:29 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Users\Alex Kaufman\Desktop\UserInterfaceExercise\webapps\host-manager
+Sep 15, 2015 10:42:29 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Users\Alex Kaufman\Desktop\UserInterfaceExercise\webapps\manager
+Sep 15, 2015 10:42:29 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Users\Alex Kaufman\Desktop\UserInterfaceExercise\webapps\ROOT
+Sep 15, 2015 10:42:29 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Users\Alex Kaufman\Desktop\UserInterfaceExercise\webapps\test
+Sep 15, 2015 10:42:29 AM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8080"]
+Sep 15, 2015 10:42:29 AM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-bio-8009"]
+Sep 15, 2015 10:42:29 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 3914 ms
+Sep 15, 2015 11:29:41 AM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8080"]
+Sep 15, 2015 11:29:41 AM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-bio-8009"]
+Sep 15, 2015 11:29:42 AM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service Catalina
+Sep 15, 2015 11:29:42 AM org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+SEVERE: The web application [/rest2ldap] appears to have started a thread named [OpenDJ LDAP SDK Timeout Checker] but has failed to stop it. This is very likely to create a memory leak.
+Sep 15, 2015 11:29:42 AM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-8080"]
+Sep 15, 2015 11:29:42 AM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-bio-8009"]
+Sep 15, 2015 11:29:42 AM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-bio-8080"]
+Sep 15, 2015 11:29:42 AM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-bio-8009"]
+Sep 15, 2015 11:29:47 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files (x86)\Java\jre7\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\ActiveState Komodo Edit 8\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\nodejs\;C:\Program Files (x86)\Skype\Phone\;C:\Users\Alex Kaufman\AppData\Roaming\npm;C:\Users\Alex Kaufman\AppData\Local\atom\bin;.
+Sep 15, 2015 11:29:47 AM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8080"]
+Sep 15, 2015 11:29:47 AM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-bio-8009"]
+Sep 15, 2015 11:29:47 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 553 ms
+Sep 15, 2015 11:29:47 AM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+Sep 15, 2015 11:29:47 AM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.53
+Sep 15, 2015 11:29:47 AM org.apache.catalina.startup.HostConfig deployWAR
+INFO: Deploying web application archive C:\Users\Alex Kaufman\Desktop\UserInterfaceExercise\webapps\rest2ldap.war
+Sep 15, 2015 11:29:49 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Users\Alex Kaufman\Desktop\UserInterfaceExercise\webapps\docs
+Sep 15, 2015 11:29:49 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Users\Alex Kaufman\Desktop\UserInterfaceExercise\webapps\examples
+Sep 15, 2015 11:29:50 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Users\Alex Kaufman\Desktop\UserInterfaceExercise\webapps\host-manager
+Sep 15, 2015 11:29:50 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Users\Alex Kaufman\Desktop\UserInterfaceExercise\webapps\manager
+Sep 15, 2015 11:29:50 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Users\Alex Kaufman\Desktop\UserInterfaceExercise\webapps\ROOT
+Sep 15, 2015 11:29:50 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Users\Alex Kaufman\Desktop\UserInterfaceExercise\webapps\test
+Sep 15, 2015 11:29:50 AM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8080"]
+Sep 15, 2015 11:29:50 AM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-bio-8009"]
+Sep 15, 2015 11:29:50 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 3424 ms

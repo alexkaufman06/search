@@ -1,0 +1,256 @@
+Sep 16, 2015 1:36:40 AM org.glassfish.grizzly.filterchain.DefaultFilterChain execute
+WARNING: GRIZZLY0013: Exception during FilterChain execution
+java.lang.NullPointerException
+	at org.apache.coyote.http11.InternalOutputBuffer.realWriteBytes(InternalOutputBuffer.java:215)
+	at org.apache.tomcat.util.buf.ByteChunk.flushBuffer(ByteChunk.java:480)
+	at org.apache.coyote.http11.InternalOutputBuffer.flush(InternalOutputBuffer.java:119)
+	at org.apache.coyote.http11.AbstractHttp11Processor.action(AbstractHttp11Processor.java:799)
+	at org.apache.coyote.Response.action(Response.java:174)
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:366)
+	at org.apache.catalina.connector.OutputBuffer.flush(OutputBuffer.java:333)
+	at org.apache.catalina.connector.CoyoteOutputStream.flush(CoyoteOutputStream.java:101)
+	at org.codehaus.jackson.impl.Utf8Generator.flush(Utf8Generator.java:1085)
+	at org.codehaus.jackson.map.ObjectMapper.writeValue(ObjectMapper.java:1606)
+	at org.codehaus.jackson.impl.JsonGeneratorBase.writeObject(JsonGeneratorBase.java:314)
+	at org.forgerock.json.resource.servlet.HttpUtils.fail(HttpUtils.java:221)
+	at org.forgerock.json.resource.servlet.Servlet2Adapter$Servlet2Synchronizer.signalAndComplete(Servlet2Adapter.java:72)
+	at org.forgerock.json.resource.servlet.RequestRunner.onError(RequestRunner.java:295)
+	at org.forgerock.json.resource.servlet.RequestRunner.access$000(RequestRunner.java:58)
+	at org.forgerock.json.resource.servlet.RequestRunner$3.handleResult(RequestRunner.java:248)
+	at org.forgerock.json.resource.servlet.RequestRunner$3.handleResult(RequestRunner.java:191)
+	at org.forgerock.json.resource.Resources$AbstractFutureResultHandler.handleResult(Resources.java:179)
+	at org.forgerock.json.resource.Resources$FutureQueryResultHandler.handleResult(Resources.java:341)
+	at org.forgerock.opendj.rest2ldap.LDAPCollectionResourceProvider$13.handleResult(LDAPCollectionResourceProvider.java:1057)
+	at org.forgerock.opendj.rest2ldap.LDAPCollectionResourceProvider$5$1$1.completeIfNecessary(LDAPCollectionResourceProvider.java:520)
+	at org.forgerock.opendj.rest2ldap.LDAPCollectionResourceProvider$5$1$1.completeIfNecessary(LDAPCollectionResourceProvider.java:507)
+	at org.forgerock.opendj.rest2ldap.LDAPCollectionResourceProvider$5$1$1.handleResult(LDAPCollectionResourceProvider.java:495)
+	at org.forgerock.opendj.rest2ldap.LDAPCollectionResourceProvider$5$1$1.handleResult(LDAPCollectionResourceProvider.java:384)
+	at org.forgerock.opendj.ldap.HeartBeatConnectionFactory$ConnectionImpl$AbstractWrappedResultHandler.handleResult(HeartBeatConnectionFactory.java:299)
+	at com.forgerock.opendj.util.AsynchronousFutureResult$Sync.innerSetResult(AsynchronousFutureResult.java:189)
+	at com.forgerock.opendj.util.AsynchronousFutureResult.handleResult(AsynchronousFutureResult.java:317)
+	at org.forgerock.opendj.ldap.spi.AbstractLDAPFutureResultImpl.setResultOrError(AbstractLDAPFutureResultImpl.java:186)
+	at org.forgerock.opendj.grizzly.LDAPClientFilter$ClientResponseHandler.searchResult(LDAPClientFilter.java:363)
+	at org.forgerock.opendj.io.LDAPReader.readSearchResult(LDAPReader.java:695)
+	at org.forgerock.opendj.io.LDAPReader.readProtocolOp(LDAPReader.java:559)
+	at org.forgerock.opendj.io.LDAPReader.readMessage(LDAPReader.java:132)
+	at org.forgerock.opendj.grizzly.LDAPBaseFilter.handleRead(LDAPBaseFilter.java:82)
+	at org.glassfish.grizzly.filterchain.ExecutorResolver$9.execute(ExecutorResolver.java:119)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeFilter(DefaultFilterChain.java:291)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeChainPart(DefaultFilterChain.java:209)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.execute(DefaultFilterChain.java:137)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.process(DefaultFilterChain.java:115)
+	at org.glassfish.grizzly.ProcessorExecutor.execute(ProcessorExecutor.java:77)
+	at org.glassfish.grizzly.nio.transport.TCPNIOTransport.fireIOEvent(TCPNIOTransport.java:550)
+	at org.glassfish.grizzly.strategies.AbstractIOStrategy.fireIOEvent(AbstractIOStrategy.java:112)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.run0(WorkerThreadIOStrategy.java:117)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.access$100(WorkerThreadIOStrategy.java:56)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy$WorkerThreadRunnable.run(WorkerThreadIOStrategy.java:137)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:565)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:545)
+	at java.lang.Thread.run(Unknown Source)
+
+Sep 16, 2015 2:18:16 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files (x86)\Java\jre7\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\ActiveState Komodo Edit 8\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\nodejs\;C:\Program Files (x86)\Skype\Phone\;C:\Users\Alex Kaufman\AppData\Roaming\npm;C:\Users\Alex Kaufman\AppData\Local\atom\bin;.
+Sep 16, 2015 2:18:17 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8080"]
+Sep 16, 2015 2:18:17 PM org.apache.coyote.AbstractProtocol init
+SEVERE: Failed to initialize end point associated with ProtocolHandler ["http-bio-8080"]
+java.net.BindException: Address already in use: JVM_Bind <null>:8080
+	at org.apache.tomcat.util.net.JIoEndpoint.bind(JIoEndpoint.java:410)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:640)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:434)
+	at org.apache.coyote.http11.AbstractHttp11JsseProtocol.init(AbstractHttp11JsseProtocol.java:119)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:978)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:813)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:638)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:663)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:280)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:454)
+Caused by: java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.bind(Unknown Source)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at org.apache.tomcat.util.net.DefaultServerSocketFactory.createSocket(DefaultServerSocketFactory.java:49)
+	at org.apache.tomcat.util.net.JIoEndpoint.bind(JIoEndpoint.java:397)
+	... 17 more
+
+Sep 16, 2015 2:18:17 PM org.apache.catalina.core.StandardService initInternal
+SEVERE: Failed to initialize connector [Connector[HTTP/1.1-8080]]
+org.apache.catalina.LifecycleException: Failed to initialize component [Connector[HTTP/1.1-8080]]
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:106)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:813)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:638)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:663)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:280)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:454)
+Caused by: org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:980)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	... 12 more
+Caused by: java.net.BindException: Address already in use: JVM_Bind <null>:8080
+	at org.apache.tomcat.util.net.JIoEndpoint.bind(JIoEndpoint.java:410)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:640)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:434)
+	at org.apache.coyote.http11.AbstractHttp11JsseProtocol.init(AbstractHttp11JsseProtocol.java:119)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:978)
+	... 13 more
+Caused by: java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.bind(Unknown Source)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at org.apache.tomcat.util.net.DefaultServerSocketFactory.createSocket(DefaultServerSocketFactory.java:49)
+	at org.apache.tomcat.util.net.JIoEndpoint.bind(JIoEndpoint.java:397)
+	... 17 more
+
+Sep 16, 2015 2:18:17 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-bio-8009"]
+Sep 16, 2015 2:18:17 PM org.apache.coyote.AbstractProtocol init
+SEVERE: Failed to initialize end point associated with ProtocolHandler ["ajp-bio-8009"]
+java.net.BindException: Address already in use: JVM_Bind <null>:8009
+	at org.apache.tomcat.util.net.JIoEndpoint.bind(JIoEndpoint.java:410)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:640)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:434)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:978)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:813)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:638)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:663)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:280)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:454)
+Caused by: java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.bind(Unknown Source)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at org.apache.tomcat.util.net.DefaultServerSocketFactory.createSocket(DefaultServerSocketFactory.java:49)
+	at org.apache.tomcat.util.net.JIoEndpoint.bind(JIoEndpoint.java:397)
+	... 16 more
+
+Sep 16, 2015 2:18:17 PM org.apache.catalina.core.StandardService initInternal
+SEVERE: Failed to initialize connector [Connector[AJP/1.3-8009]]
+org.apache.catalina.LifecycleException: Failed to initialize component [Connector[AJP/1.3-8009]]
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:106)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:813)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:638)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:663)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:280)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:454)
+Caused by: org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:980)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	... 12 more
+Caused by: java.net.BindException: Address already in use: JVM_Bind <null>:8009
+	at org.apache.tomcat.util.net.JIoEndpoint.bind(JIoEndpoint.java:410)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:640)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:434)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:978)
+	... 13 more
+Caused by: java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.bind(Unknown Source)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at org.apache.tomcat.util.net.DefaultServerSocketFactory.createSocket(DefaultServerSocketFactory.java:49)
+	at org.apache.tomcat.util.net.JIoEndpoint.bind(JIoEndpoint.java:397)
+	... 16 more
+
+Sep 16, 2015 2:18:17 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 691 ms
+Sep 16, 2015 2:18:17 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+Sep 16, 2015 2:18:17 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.53
+Sep 16, 2015 2:18:17 PM org.apache.catalina.startup.HostConfig deployWAR
+INFO: Deploying web application archive C:\Users\Alex Kaufman\Desktop\UserInterfaceExercise\webapps\rest2ldap.war
+Sep 16, 2015 2:18:20 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Users\Alex Kaufman\Desktop\UserInterfaceExercise\webapps\docs
+Sep 16, 2015 2:18:20 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Users\Alex Kaufman\Desktop\UserInterfaceExercise\webapps\examples
+Sep 16, 2015 2:18:21 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Users\Alex Kaufman\Desktop\UserInterfaceExercise\webapps\host-manager
+Sep 16, 2015 2:18:21 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Users\Alex Kaufman\Desktop\UserInterfaceExercise\webapps\manager
+Sep 16, 2015 2:18:21 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Users\Alex Kaufman\Desktop\UserInterfaceExercise\webapps\ROOT
+Sep 16, 2015 2:18:21 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Users\Alex Kaufman\Desktop\UserInterfaceExercise\webapps\test
+Sep 16, 2015 2:18:21 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 4353 ms
+Sep 16, 2015 2:18:21 PM org.apache.catalina.core.StandardServer await
+SEVERE: StandardServer.await: create[localhost:8005]: 
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.bind(Unknown Source)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at org.apache.catalina.core.StandardServer.await(StandardServer.java:426)
+	at org.apache.catalina.startup.Catalina.await(Catalina.java:777)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:723)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:321)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:455)
+
+Sep 16, 2015 2:18:21 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8080"]
+Sep 16, 2015 2:18:21 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-bio-8009"]
+Sep 16, 2015 2:18:21 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service Catalina
+Sep 16, 2015 2:18:21 PM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [/rest2ldap] created a ThreadLocal with key of type [org.forgerock.opendj.ldap.DN$1] (value [org.forgerock.opendj.ldap.DN$1@d884f8]) and a value of type [java.util.WeakHashMap] (value [{org.forgerock.opendj.ldap.schema.Schema@8275bb={dc=com=dc=com, dc=example,dc=com=dc=example,dc=com}}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Sep 16, 2015 2:18:21 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-8080"]
+Sep 16, 2015 2:18:21 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-bio-8080"]
+Sep 16, 2015 2:18:21 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-bio-8009"]
+Sep 16, 2015 2:18:21 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-bio-8009"]
